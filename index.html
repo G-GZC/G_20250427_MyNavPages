@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的导航页面</title>
+    <title>NAV PAGES</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -11,20 +11,20 @@
 <body>
     <div class="container">
         <header>
-            <h1><i class="fas fa-compass"></i> 我的导航</h1>
-            <p class="subtitle">快速访问您喜爱的网站</p>
+            <h1><i class="fas fa-compass"></i> MY NAV</h1>
+            <p class="subtitle">Quick access to the favorite sites</p>
         </header>
         
         <div class="search-container">
-            <form id="search-form" action="https://www.google.com/search" method="get" target="_blank">
-                <input type="text" id="search-input" name="q" placeholder="使用谷歌搜索...">
-                <button type="submit"><i class="fas fa-search"></i> 搜索</button>
+            <form id="search-form" action="https://www.google.com.sg/search" method="get" target="_blank">
+                <input type="text" id="search-input" name="q" placeholder="Use Google to search...">
+                <button type="submit"><i class="fas fa-search"></i> Search</button>
             </form>
         </div>
         
         <div class="nav-categories">
             <div class="category">
-                <h2><i class="fas fa-star"></i> 常用网站</h2>
+                <h2><i class="fas fa-star"></i> Frequently</h2>
                 <div class="links">
                     <div class="link-wrapper">
                         <a href="https://www.google.com" target="_blank" class="link-card">
@@ -41,39 +41,7 @@
                         <button class="delete-link-btn" title="删除链接">
                             <i class="fas fa-times"></i>
                         </button>
-                    </div>
-                    <div class="link-wrapper">
-                        <a href="https://www.youtube.com" target="_blank" class="link-card">
-                            <i class="fab fa-youtube"></i> YouTube
-                        </a>
-                        <button class="delete-link-btn" title="删除链接">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    <div class="link-wrapper">
-                        <a href="https://www.bilibili.com" target="_blank" class="link-card">
-                            <i class="fas fa-video"></i> 哔哩哔哩
-                        </a>
-                        <button class="delete-link-btn" title="删除链接">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    <div class="link-wrapper">
-                        <a href="https://www.baidu.com" target="_blank" class="link-card">
-                            <i class="fas fa-search"></i> 百度
-                        </a>
-                        <button class="delete-link-btn" title="删除链接">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    <div class="link-wrapper">
-                        <a href="https://www.taobao.com" target="_blank" class="link-card">
-                            <i class="fas fa-shopping-cart"></i> 淘宝
-                        </a>
-                        <button class="delete-link-btn" title="删除链接">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
+                    </div>                    
                     <button class="add-link-btn" data-category="常用网站">
                         <i class="fas fa-plus"></i>
                     </button>
@@ -81,7 +49,7 @@
             </div>
             
             <div class="category">
-                <h2><i class="fas fa-archive"></i> 归档网站</h2>
+                <h2><i class="fas fa-archive"></i> Archives</h2>
                 <div class="links">
                     <div class="link-wrapper">
                         <a href="https://www.wikipedia.org" target="_blank" class="link-card">
@@ -90,47 +58,7 @@
                         <button class="delete-link-btn" title="删除链接">
                             <i class="fas fa-times"></i>
                         </button>
-                    </div>
-                    <div class="link-wrapper">
-                        <a href="https://www.stackoverflow.com" target="_blank" class="link-card">
-                            <i class="fab fa-stack-overflow"></i> Stack Overflow
-                        </a>
-                        <button class="delete-link-btn" title="删除链接">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    <div class="link-wrapper">
-                        <a href="https://www.zhihu.com" target="_blank" class="link-card">
-                            <i class="fas fa-question-circle"></i> 知乎
-                        </a>
-                        <button class="delete-link-btn" title="删除链接">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    <div class="link-wrapper">
-                        <a href="https://www.douban.com" target="_blank" class="link-card">
-                            <i class="fas fa-book"></i> 豆瓣
-                        </a>
-                        <button class="delete-link-btn" title="删除链接">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    <div class="link-wrapper">
-                        <a href="https://www.jd.com" target="_blank" class="link-card">
-                            <i class="fas fa-shopping-bag"></i> 京东
-                        </a>
-                        <button class="delete-link-btn" title="删除链接">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    <div class="link-wrapper">
-                        <a href="https://www.weibo.com" target="_blank" class="link-card">
-                            <i class="fab fa-weibo"></i> 微博
-                        </a>
-                        <button class="delete-link-btn" title="删除链接">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
+                    </div>                   
                     <button class="add-link-btn" data-category="归档网站">
                         <i class="fas fa-plus"></i>
                     </button>
@@ -139,7 +67,7 @@
         </div>
         
         <footer>
-            <p>© 2023 我的导航页面 | <a href="https://github.com/zchga/G_20250427_MyNavPages" target="_blank">GitHub</a></p>
+            <p>© 2025 My Nav Pages | <a href="https://github.com/zchga/G_20250427_MyNavPages" target="_blank">GitHub</a></p>
         </footer>
     </div>
     
