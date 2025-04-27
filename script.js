@@ -22,6 +22,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // 为所有删除按钮添加点击事件
+    const deleteButtons = document.querySelectorAll('.delete-link-btn');
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            if (confirm('确定要删除这个链接吗？')) {
+                const linkWrapper = this.parentElement;
+                linkWrapper.remove();
+            }
+        });
+    });
+    
     // 为所有添加链接按钮添加点击事件
     const addLinkButtons = document.querySelectorAll('.add-link-btn');
     addLinkButtons.forEach(button => {
@@ -80,6 +94,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const url = document.getElementById('link-url').value;
             const iconClass = document.getElementById('link-icon').value || 'fas fa-link';
             
+            // 创建链接包装器
+            const linkWrapper = document.createElement('div');
+            linkWrapper.className = 'link-wrapper';
+            
             // 创建新链接元素
             const newLink = document.createElement('a');
             newLink.href = url;
@@ -87,9 +105,34 @@ document.addEventListener('DOMContentLoaded', function() {
             newLink.target = '_blank';
             newLink.innerHTML = `<i class="${iconClass}"></i>${name}`;
             
-            // 将新链接插入到按钮之前
+            // 创建删除按钮
+            const deleteBtn = document.createElement('button');
+            deleteBtn.className = 'delete-link-btn';
+            deleteBtn.title = '删除链接';
+            deleteBtn.innerHTML = '<i class="fas fa-times"></i>';
+            
+            // 为删除按钮添加点击事件
+            deleteBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                if (confirm('确定要删除这个链接吗？')) {
+                    linkWrapper.remove();
+                }
+            });
+            
+            // 为链接添加点击事件
+            newLink.addEventListener('click', function() {
+                console.log('链接被点击:', this.href);
+            });
+            
+            // 组装链接包装器
+            linkWrapper.appendChild(newLink);
+            linkWrapper.appendChild(deleteBtn);
+            
+            // 将链接包装器插入到按钮之前
             const linksContainer = buttonElement.parentElement;
-            linksContainer.insertBefore(newLink, buttonElement);
+            linksContainer.insertBefore(linkWrapper, buttonElement);
             
             // 关闭模态框
             document.body.removeChild(modal);

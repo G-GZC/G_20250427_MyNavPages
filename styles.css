@@ -145,6 +145,7 @@ h2 i {
     text-align: center;
     transition: var(--transition);
     font-weight: 500;
+    width: 100%;
 }
 
 .link-card i {
@@ -155,6 +156,52 @@ h2 i {
 .link-card:hover {
     background-color: #e9ecef;
     color: var(--primary-color);
+}
+
+.link-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.delete-link-btn {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.6rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+    padding: 0;
+    line-height: 1;
+}
+
+.delete-link-btn i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.link-wrapper:hover .delete-link-btn {
+    opacity: 1;
+}
+
+.delete-link-btn:hover {
+    background-color: #ee5253;
 }
 
 .add-link-btn {
