@@ -98,8 +98,11 @@ button:hover {
 
 .nav-categories {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 25px;
+    grid-template-columns: 1fr 1fr;  /* 创建两列 */
+    grid-template-rows: 1fr 1fr;     /* 创建两行 */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .category {
@@ -257,12 +260,9 @@ footer a:hover {
     }
     
     .nav-categories {
-        display: grid;
-        grid-template-columns: 1fr 1fr;  /* 创建两列 */
-        grid-template-rows: 1fr 1fr;     /* 创建两行 */
-        gap: 20px;
-        max-width: 1200px;
-        margin: 0 auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+
     }
     
     .links {
